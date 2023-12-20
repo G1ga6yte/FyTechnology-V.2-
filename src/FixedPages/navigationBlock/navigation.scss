@@ -1,0 +1,19 @@
+.navigationBlock{
+  width: 100%;
+  z-index: 9999;
+  padding: 50px 100px;
+  position: relative;
+  .nav-link{
+    text-decoration: none;
+    .nav-span{
+      font-family: 'Inter-Medium', sans-serif;
+      color: black;
+      font-size: 24px;
+      text-decoration-line: underline;
+    }
+
+  }
+  .nav-button{
+     text-decoration: none !important;
+   }
+}

@@ -1,0 +1,231 @@
+.HeaderBlock {
+  position: relative;
+  padding: 30px 0;
+
+  .bckLines{
+    width: 100%;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    .lineBckBlock {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70%;
+      overflow: hidden;
+      background-color: rgba(68, 68, 68, 0.3);
+      padding: 0 1px 1px 0;
+      border-radius: 0 0 198px 0;
+      &:nth-child(1){
+        z-index: 10;
+        .line{
+          height: 720px;
+        }
+        .lightingBlock{
+          animation: progressLineS 8s;
+        }
+      }
+      &:nth-child(2){
+        z-index: 9;
+        width: 75%;
+        .line{
+          height: 800px;
+        }
+        .lightingBlock{
+          animation: progressLineM 11s;
+        }
+      }
+      &:nth-child(3){
+        z-index: 8;
+        width: 80%;
+        .line{
+          height: 880px;
+        }
+        .lightingBlock{
+          animation: progressLineL 14s;
+        }
+      }
+
+      .line {
+        position: relative;
+        z-index: 11;
+        width: 100%;
+        height: 750px;
+        border-radius: 0 0 199px 0;
+        background-color: white;
+        overflow: hidden;
+      }
+
+      .lightingBlock {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: -100px;
+        right: -50px;
+        border-radius: 50%;
+        background-color: #0038FF;
+        filter: drop-shadow(0px 0px 4px rgba(0, 56, 255, 0.8));
+        animation-iteration-count: infinite !important;
+        animation-timing-function: linear !important;
+      }
+    }
+  }
+  .headerCont{
+    position: relative;
+    z-index: 20;
+    width: 75%;
+    margin: 0 auto;
+
+    .header{
+      font-family: 'Inter-Bold', sans-serif;
+      font-size: 104px;
+      color: black;
+      width: 100%;
+      margin-bottom: 250px;
+      &:nth-child(1){
+        animation: fromRight 3s;
+      }
+      &:nth-child(3){
+        text-align: end;
+        animation: fromLeft 3s;
+      }
+    }
+    .imageBlock{
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      z-index: -1;
+      .header-img{
+        animation: imageAnim 3s;
+        animation-timing-function: linear;
+      }
+    }
+    
+  }
+  .links-block{
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+    .Link{
+      font-family: 'Inter-Regular', sans-serif;
+      font-size: 32px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+@keyframes progressLineS {
+  0% {
+    transform: translate(0, -50px);
+  }
+  12% {
+    transform: translate(0, 670px);
+  }
+  15% {
+    transform: translate(-100px, 770px);
+  }
+  25% {
+    transform: translate(-750px, 770px);
+  }
+  37% {
+    transform: translate(-1500px, 770px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+@keyframes progressLineM {
+  60% {
+    transform: translate(0, -50px);
+  }
+  72% {
+    transform: translate(0, 750px);
+  }
+  75% {
+    transform: translate(-100px, 850px);
+  }
+  85% {
+    transform: translate(-800px, 850px);
+  }
+  97% {
+    transform: translate(-1600px, 850px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+@keyframes progressLineL {
+  30% {
+    transform: translate(0, -50px);
+  }
+  42% {
+    transform: translate(0, 830px);
+  }
+  45% {
+    transform: translate(-100px, 930px);
+  }
+  55% {
+    transform: translate(-850px, 930px);
+  }
+  67% {
+    transform: translate(-1700px, 930px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+
+@keyframes imageAnim {
+  0%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  30%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  90%{
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fromRight  {
+  0%{
+    transform: translateX(80%);
+    opacity: 0;
+  }
+  30%{
+    transform: translateX(80%);
+    opacity: 0;
+  }
+  90%{
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes fromLeft {
+  0%{
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+  30%{
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+  90%{
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
