@@ -1,0 +1,115 @@
+.FeaturedWorkBlock {
+  margin-top: 120px;
+  position: relative;
+  z-index: 20;
+
+  .worksCont {
+    margin-top: 15px;
+    display: flex;
+
+    .leftLine {
+      width: 24%;
+      margin-right: 1%;
+    }
+
+    .centerLine {
+      width: 48%;
+      margin: 0 1%;
+      justify-content: space-between;
+
+      .ItemBlock {
+        width: 48% !important;
+      }
+      .ItemBlockW {
+        width: 100% !important;
+      }
+
+      .ButtonBlock{
+        .G-Link-Button{
+          background-color: white;
+          outline: 1px solid black;
+          &:hover{
+            outline: none;
+            background: #0038FF;
+            .link-button-text{
+              color: white;
+            }
+            .arrow-img{
+              display: block;
+            }
+            .Black{
+              display: none;
+            }
+          }
+          .link-button-text{
+            color: black;
+          }
+          .arrow-img{
+            display: none
+          }
+          .Black{
+            display: block;
+          }
+        }
+      }
+    }
+
+    .rightLine {
+      width: 24%;
+      margin-left: 1%;
+    }
+
+    .ItemBlock {
+      border-radius: 16px;
+      border: 1px solid #EAEAEA;
+      background: #FFF;
+      padding: 24px;
+      width: 100%;
+      margin: 8px 0;
+
+      .ItemImg {
+        width: 100%;
+      }
+
+      .ItemSkills {
+        margin-top: 12px;
+
+        .ItemSkill {
+          padding: 8px;
+          margin: 4px;
+          border-radius: 12px;
+          border: 1px solid #CECECE;
+          color: #CECECE;
+          font-size: 16px;
+          font-family: 'Inter-Regular', sans-serif;
+        }
+
+        .ItemSkillM {
+          background: #FFA06B !important;
+          color: white !important;
+          border: none !important;
+        }
+      }
+
+      .line {
+        width: 100%;
+        margin: 20px 0;
+        height: 1px;
+        transform: scale(1.15);
+        background-color: #EAEAEA;
+      }
+
+      .ItemDesc {
+        color: #CECECE;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 20px;
+        margin-top: 8px;
+        font-family: 'Inter-Regular', sans-serif;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
+    }
+  }
+}

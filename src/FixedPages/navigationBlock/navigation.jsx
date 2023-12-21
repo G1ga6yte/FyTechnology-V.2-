@@ -28,7 +28,7 @@ function Navigation (){
        {/*style={{padding: navStyle.padding, backgroundColor: navStyle.background}}*/}
        <Link className="nav-link G-Link-Hover" to="/home"><span className="nav-span G-transition05">hello@fytechnology.com</span></Link>
        <Link className="link-img" to="/home"><img className="img" src={svgData.miniLogo} alt=""/></Link>
-       <Link className="nav-button" to="/home"><LinkButton/></Link>
+       <Link className="nav-button" to="/home"><LinkButton Text={"Contact us"}/></Link>
      </div>
   )
 }

@@ -6,6 +6,14 @@
   display: flex;
   justify-content: center;
 }
+.G-flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.G-flex-column{
+  display: flex;
+  flex-direction: column;
+}
 .G-alignItems-center{
   align-items: center;
 }
@@ -44,6 +52,31 @@
   }
 }
 
+.G-fzNormal{
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  font-family: 'Inter-Regular', sans-serif;
+}
+
+.G-Block-Header{
+  font-size: 80px;
+  color: black;
+  font-family: 'Inter-Medium', sans-serif;
+  line-height: 97px;
+}
+
+.G-skill-inBlock{
+  padding: 8px;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid black;
+  display: block;
+  font-size: 20px;
+  font-family: 'Inter-Regular', sans-serif;
+  color: black;
+  margin: 4px 0;
+}
 
 
 
@@ -54,6 +87,7 @@
   padding: 8px 16px;
   background-color: black;
   border-radius: 12px;
+  cursor: pointer;
 
   &:hover{
     background: #0038FF;
@@ -75,5 +109,8 @@
   }
   .arrow-img{
     width: 24px;
+  }
+  .Black{
+    display: none;
   }
 }
