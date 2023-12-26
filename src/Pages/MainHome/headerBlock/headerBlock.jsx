@@ -1,10 +1,16 @@
-import React from "react";
+import React, {Suspense} from "react";
 import "./headerBlock.scss"
 import {ImgData} from "../../../source/img/imgData";
 import {Link} from "react-router-dom";
 
 
+
+
 function HeaderBlock (){
+  const Spline = React.lazy(() => import('@splinetool/react-spline'));
+  
+  
+  
   return(
      <div className="HeaderBlock">
        <div className="bckLines">
@@ -24,10 +30,13 @@ function HeaderBlock (){
        
        <div className="headerCont">
           <div className="header upHeader">Ultra-tech</div>
-         <div className="imageBlock G-flex-center">
-           <img className="header-img" src={ImgData.bigLogo} alt=""/>
-         </div>
          <div className="header downHeader">Approach</div>
+         <p className="headerPrg">We use the latest technologies to create innovative and user-friendly solutions that meet the needs of our clients</p>
+         <div className="imageBlock G-flex-center">
+           <Suspense fallback={<div>Loading...</div>}>
+           <Spline scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode"/>
+           </Suspense>
+         </div>
        </div>
        
        <div className="links-block G-flex-between">
