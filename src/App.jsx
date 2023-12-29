@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeMain />} /> // MainHome - home global file
         <Route path="/home" element={<HomeMain />} /> // MainHome - home global file
-
+        
       </Routes>
       
     </div>

@@ -13,12 +13,12 @@ function FeaturedBlock (){
            {FeaturesData.map((el, index)=>{
              if (index < 3){
                return(
-                  <div className="ItemBlock">
+                  <div key={index} className="ItemBlock">
                     <img className="ItemImg" src={el.images[0]} alt=""/>
                     <div className="ItemSkills G-flex-wrap">
-                      {el.skills.map((el)=>{
+                      {el.skills.map((el, index)=>{
                         return(
-                           <div className={`ItemSkill ${el.marked ? "ItemSkillM" : ""}`}>
+                           <div key={index} className={`ItemSkill ${el.marked ? "ItemSkillM" : ""}`}>
                              {el.skill}
                            </div>
                         )
@@ -37,12 +37,12 @@ function FeaturedBlock (){
            {FeaturesData.map((el, index)=>{
              if (index < 7 && index > 2){
                return(
-                  <div className={`ItemBlock ${el.width ? "ItemBlockW" : "ItemBlock"}`}>
+                  <div key={index} className={`ItemBlock ${el.width ? "ItemBlockW" : "ItemBlock"}`}>
                     <img className="ItemImg" src={el.images[0]} alt=""/>
                     <div className="ItemSkills G-flex-wrap">
-                      {el.skills.map((el)=>{
+                      {el.skills.map((el, index)=>{
                         return(
-                           <div className={`ItemSkill ${el.marked ? "ItemSkillM" : ""}`}>
+                           <div key={index} className={`ItemSkill ${el.marked ? "ItemSkillM" : ""}`}>
                              {el.skill}
                            </div>
                         )
@@ -64,12 +64,12 @@ function FeaturedBlock (){
            {FeaturesData.map((el, index)=>{
              if (index < 10 && index > 6){
                return(
-                  <div className="ItemBlock">
+                  <div key={index} className="ItemBlock">
                     <img className="ItemImg" src={el.images[0]} alt=""/>
                     <div className="ItemSkills G-flex-wrap">
-                      {el.skills.map((el)=>{
+                      {el.skills.map((el, index)=>{
                         return(
-                           <div className={`ItemSkill ${el.marked ? "ItemSkillM" : ""}`}>
+                           <div key={index} className={`ItemSkill ${el.marked ? "ItemSkillM" : ""}`}>
                              {el.skill}
                            </div>
                         )

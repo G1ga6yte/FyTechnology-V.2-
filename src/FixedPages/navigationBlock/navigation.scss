@@ -1,8 +1,9 @@
 .navigationBlock{
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 9999;
   padding: 50px 100px;
-  position: relative;
   .nav-link{
     text-decoration: none;
     .nav-span{
@@ -16,4 +17,27 @@
   .nav-button{
      text-decoration: none !important;
    }
+  .Links{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    .Link{
+      font-family: 'Inter-Regular', sans-serif;
+      font-size: 24px;
+      text-decoration: none;
+      color: black;
+      margin: 0 60px;
+    }
+  }
+
+}
+.scrolled{
+  top: 20px;
+  border-radius: 64.5px;
+  background: rgba(217, 217, 217, 0.10);
+  box-shadow: -68.3px 68.3px 68.3px 0px rgba(255, 255, 255, 0.10) inset, 68.3px -68.3px 68.3px 0px rgba(165, 165, 165, 0.10) inset;
+  backdrop-filter: blur(68.30000305175781px);
+  width: 90%;
+  margin: 0 5%;
+  padding: 20px 50px;
 }
