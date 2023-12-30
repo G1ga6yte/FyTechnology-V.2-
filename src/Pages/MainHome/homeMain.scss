@@ -1,3 +1,7 @@
 .homeMain{
-
+  canvas{
+    aspect-ratio: auto !important;
+    overflow-clip-margin: unset !important;
+    overflow: visible !important;
+  }
 }

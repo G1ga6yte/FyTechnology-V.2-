@@ -1,6 +1,6 @@
 .Opportunity {
   position: relative;
-  z-index: 20;
+  z-index: 9800;
 
   &:hover {
     .serviceItem {
@@ -123,18 +123,48 @@
           animation: coloring2 1.5s linear;
         }
       }
+      &:nth-child(16) {
+        animation: coloring 1.6s linear;
+
+        &:before {
+          animation: coloring2 1.6s linear;
+        }
+      }
+      &:nth-child(17) {
+        animation: coloring 1.7s linear;
+
+        &:before {
+          animation: coloring2 1.7s linear;
+        }
+      }
+    }
+  }
+
+  .Header{
+    display: flex;
+    height: 100px;
+    overflow: hidden;
+    top: 200px;
+    .letter{
+      font-size: 80px;
+      font-family: Inter-Medium, sans-serif;
+    }
+    .space{
+      width: 30px;
     }
   }
 
   .opportunityCont {
     width: 100%;
-    background-color: white;
-    border-radius: 16px;
-    border: 1px solid #EAEAEA;
-    padding: 48px;
+
     margin-top: 15px;
 
     .servicesBlock {
+      background-color: white;
+      border-radius: 16px;
+      border: 1px solid #EAEAEA;
+      padding: 48px;
+      overflow: hidden;
 
       .active{
         color: black !important;
@@ -182,9 +212,13 @@
 
     .includingBlock {
       align-items: start;
+      background-color: white;
+      border-radius: 16px;
+      border: 1px solid #EAEAEA;
+      padding: 48px;
+
       .includingServicesBlock{
         width: 300px;
-        height: 220px;
       }
 
       .textHeader {
@@ -204,25 +238,22 @@
 }
 
 @keyframes coloring {
-  0% {
-    color: #EAEAEA;
+  0%{
+    transform: translateY(300px);
   }
-  50% {
-    color: black;
-  }
-  100% {
-    color: #EAEAEA;
+  100%{
+    transform: translateY(0);
   }
 }
 
 @keyframes coloring2 {
-  0% {
-    background-color: white;
-  }
-  50% {
-    background-color: black
-  }
-  100% {
-    background-color: white;
-  }
+  //0% {
+  //  background-color: white;
+  //}
+  //50% {
+  //  background-color: black
+  //}
+  //100% {
+  //  background-color: white;
+  //}
 }

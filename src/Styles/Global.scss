@@ -82,11 +82,10 @@
 
 
 .imageBlock{
-  position: fixed;
-  top: 100px;
-  z-index: 1100;
-  overflow: hidden;
-  transition: 0.2s ease;
+  width: 100%;
+  z-index: 8888;
+  div{
+  }
 }
 
 .G-Link-Button{

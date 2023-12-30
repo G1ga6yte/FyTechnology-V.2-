@@ -1,207 +1,40 @@
-import React, {Suspense, useState} from "react";
+import React, {useState} from "react";
 import HeaderBlock from "./headerBlock/headerBlock";
 import "./homeMain.scss"
 import Opportunity from "./opportunityBlock/opportunity";
 import FeaturedBlock from "./featuredworkBlock/featuredBlock";
+import Spline from "@splinetool/react-spline";
 
 function HomeMain (){
-  const Spline = React.lazy(() => import("@splinetool/react-spline"));
   const [ballStyle, setBallStyle]=useState({
-    top: "100px",
+    top: "0",
     position: "fixed"
   })
-  const [width, setWidth] = useState(100)
-  const [left, setLeft] = useState(0)
+  const [width, setWidth] = useState(1.5)
+  const [left, setLeft] = useState(20)
   
   window.addEventListener('scroll', function (){
-    
-    if (this.scrollY <= 1200){
-      let x = (40/1200)*this.scrollY
-      let z = x/2
-      let y = 100-x
+    console.log(this.scrollY);
+    if (this.scrollY > 0 && this.scrollY <= 1200){
+      let x =20- (20/1200)*(this.scrollY)
+      let y = 1.5- (0.5/1200)*(this.scrollY)
+      setLeft(x)
       setWidth(y)
-      setLeft(z)
     }
-    
-    
-    if (this.scrollY >= 1200){
-      setBallStyle({
-        top: "1300px",
-        position: "absolute"
-      })
-    }else{
-      setBallStyle({
-        top: "100px",
-        position: "fixed"
-      })
+    if (this.scrollY > 1200 && this.scrollY <=2500){
+      let x = (40/1300)*(this.scrollY-1200)
+      setLeft(x)
+      let y = 1+ (1/1300)*(this.scrollY-1200)
+      setWidth(y)
     }
-    
-    
-    
-    // if (this.scrollY >= 100){
-    //   setBallStyle({
-    //     width: "90%",
-    //     top: "100px",
-    //     left: "10%",
-    //     height: "90vh",
-    //     position: "fixed"
-    //   })
-    //   if (this.scrollY >= 200){
-    //     setBallStyle({
-    //       width: "80%",
-    //       top: "150px",
-    //       left: "20%",
-    //       height: "85vh",
-    //       position: "fixed"
-    //     })
-    //     if (this.scrollY >= 300){
-    //       setBallStyle({
-    //         width: "75%",
-    //         top: "200px",
-    //         left: "25%",
-    //         height: "80vh",
-    //         position: "fixed"
-    //       })
-    //       if (this.scrollY >=400){
-    //         setBallStyle({
-    //           width: "70%",
-    //           top: "200px",
-    //           left: "30%",
-    //           height: "75vh",
-    //           position: "fixed"
-    //         })
-    //         if (this.scrollY >= 600){
-    //           setBallStyle({
-    //             width: "65%",
-    //             top: "200px",
-    //             left: "30%",
-    //             height: "75vh",
-    //             position: "fixed"
-    //           })
-    //           if (this.scrollY >= 800){
-    //             setBallStyle({
-    //               width: "60%",
-    //               top: "200px",
-    //               left: "30%",
-    //               height: "75vh",
-    //               position: "fixed"
-    //             })
-    //             if (this.scrollY >= 900){
-    //               setBallStyle({
-    //                 width: "60%",
-    //                 top: "200px",
-    //                 left: "26%",
-    //                 height: "75vh",
-    //                 position: "fixed"
-    //               })
-    //               if (this.scrollY >=1000){
-    //                 setBallStyle({
-    //                   width: "60%",
-    //                   top: "200px",
-    //                   left: "22%",
-    //                   height: "75vh",
-    //                   position: "fixed"
-    //                 })
-    //                 if (this.scrollY >= 1200){
-    //                   setBallStyle({
-    //                     width: "60%",
-    //                     top: "1300px",
-    //                     left: "22%",
-    //                     height: "75vh",
-    //                     position: "absolute"
-    //                   })
-    //                 } else{
-    //                   setBallStyle({
-    //                     width: "60%",
-    //                     top: "200px",
-    //                     left: "22%",
-    //                     height: "75vh",
-    //                     position: "fixed"
-    //                   })
-    //                 }
-    //               }else{
-    //                 setBallStyle({
-    //                   width: "60%",
-    //                   top: "200px",
-    //                   left: "28%",
-    //                   height: "75vh",
-    //                   position: "fixed"
-    //                 })
-    //               }
-    //             }else{
-    //               setBallStyle({
-    //                 width: "60%",
-    //                 top: "200px",
-    //                 left: "30%",
-    //                 height: "75vh",
-    //                 position: "fixed"
-    //               })
-    //             }
-    //           } else{
-    //             setBallStyle({
-    //               width: "60%",
-    //               top: "200px",
-    //               left: "30%",
-    //               height: "75vh",
-    //               position: "fixed"
-    //             })
-    //           }
-    //         } else {
-    //           setBallStyle({
-    //             width: "60%",
-    //             top: "200px",
-    //             left: "30%",
-    //             height: "75vh",
-    //             position: "fixed"
-    //           })
-    //         }
-    //       }else{
-    //         setBallStyle({
-    //           width: "70%",
-    //           top: "200px",
-    //           left: "25%",
-    //           height: "80vh",
-    //           position: "fixed"
-    //         })
-    //       }
-    //     }else{
-    //       setBallStyle({
-    //         width: "80%",
-    //         top: "150px",
-    //         left: "20%",
-    //         height: "85vh",
-    //         position: "fixed"
-    //       })
-    //     }
-    //   }else{
-    //     setBallStyle({
-    //       width: "90%",
-    //       top: "100px",
-    //       left: "10%",
-    //       height: "90vh",
-    //       position: "fixed"
-    //     })
-    //   }
-    // }else{
-    //   setBallStyle({
-    //     width: "100%",
-    //     top: "100px",
-    //     left: "0",
-    //     height: "100vh",
-    //     position: "fixed"
-    //   })
-    // }
-    
     
   })
   
   
   return(
      <div className="homeMain">
-       <div style={{width: `${width}%`,left: `${left}%`, top: ballStyle.top, position: ballStyle.position}}  className="imageBlock G-flex-center">
-         <Suspense fallback={<div>Loading...</div>}>
-           <Spline scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode"/>
-         </Suspense>
+       <div style={{transform: `scale(${width})`,left: `${left}%`, top: ballStyle.top, position: ballStyle.position}}  className="imageBlock G-flex-center">
+         <Spline scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode" />
        </div>
        
        <HeaderBlock/>
