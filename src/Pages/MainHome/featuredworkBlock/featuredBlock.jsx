@@ -30,7 +30,7 @@ function FeaturedBlock() {
       setFixed('relative')
     }
     
-    if (this.scrollY >= 3600){
+    if (this.scrollY >= 4000){
       setLeft("-100%")
     }else{
       setLeft("0")
