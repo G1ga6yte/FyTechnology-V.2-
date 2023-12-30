@@ -1,7 +1,7 @@
 .FeaturedWorkBlock {
   margin-top: 1500px;
   position: relative;
-  z-index: 1500;
+  z-index: 8889;
 
   .Header{
     display: flex;
@@ -10,6 +10,8 @@
     top: 200px;
     position: relative;
     z-index: 100;
+    margin-left: 100px;
+    transition: 1s ease-in-out;
     .letter{
       font-size: 100px;
       font-family: Inter-Medium, sans-serif;
@@ -23,6 +25,25 @@
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    top: 0;
+
+    .ImgBlock{
+      position: absolute;
+      bottom: -150px;
+      .ItemImg {
+        width: 500px;
+        z-index: 11;
+      }
+    }
+
+
+
+
+
 
     //.leftLine {
     //  width: 24%;
@@ -86,6 +107,7 @@
       position: relative;
       height: 280px;
       overflow: hidden;
+      transition: 0.5s ease;
       .ItemImg {
         width: 500px;
         position: absolute;

@@ -7,6 +7,8 @@ import App from './App';
 import "./Styles/mixin.scss"
 import "./Styles/Global.scss"
 import "./Styles/font/font.scss"
+import "./Styles/font1/font1.scss"
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,4 +1,10 @@
 .App{
   background: #F1F1F1;
   height: 10000px;
+
+  .cursor{
+    width: 20px;
+    position: absolute;
+    z-index: 10000;
+  }
 }
