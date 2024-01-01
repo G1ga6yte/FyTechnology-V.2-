@@ -4,6 +4,7 @@ import "./homeMain.scss"
 import Opportunity from "./opportunityBlock/opportunity";
 import FeaturedBlock from "./featuredworkBlock/featuredBlock";
 import Spline from "@splinetool/react-spline";
+import QuestionPayBlock from "./QuestionPayBlock/questionPayBlock";
 
 function HomeMain (){
   const [ballStyle, setBallStyle]=useState({
@@ -11,12 +12,12 @@ function HomeMain (){
     position: "fixed"
   })
   const [width, setWidth] = useState(1.5)
-  const [left, setLeft] = useState(20)
+  const [left, setLeft] = useState(30)
   
   window.addEventListener('scroll', function (){
     console.log(this.scrollY);
     if (this.scrollY > 0 && this.scrollY <= 1200){
-      let x =20- (20/1200)*(this.scrollY)
+      let x =30- (30/1200)*(this.scrollY)
       let y = 1.5- (0.5/1200)*(this.scrollY)
       setLeft(x)
       setWidth(y)
@@ -34,14 +35,21 @@ function HomeMain (){
       // let y = 1+ (1/1300)*(this.scrollY-1200)
       // setWidth(y)
     }
-    if (this.scrollY > 2000 && this.scrollY <=3000){
-      let x = 0.2 + (1.3/1000)*(this.scrollY-2000)
+    if (this.scrollY > 2000 && this.scrollY <=3500){
+      let x = 0.2 + (1.3/1500)*(this.scrollY-2000)
       setWidth(x)
-      let y = 500- (420/1000)*(this.scrollY-2000)
+      let y = 500- (420/1500)*(this.scrollY-2000)
       setBallStyle({
         top: `${y}px`,
         position: "fixed"
       })
+    }
+    
+    if (this.scrollY> 4100 && this.scrollY < 5100){
+      let x = 1.5 + (0.5/1000)*(this.scrollY-4100)
+      setWidth(x)
+      let y = (100/1000)*(this.scrollY-4100)
+      setLeft(y)
     }
     
   })
@@ -58,6 +66,7 @@ function HomeMain (){
        <HeaderBlock/>
        <Opportunity/>
        <FeaturedBlock/>
+       <QuestionPayBlock/>
        {/*<div className="try">*/}
        {/*  /!*<Spline style={{position: "relative", zIndex: "9999"}} scene="https://prod.spline.design/hrAjmUuwmpLxZz8F/scene.splinecode" />*!/*/}
        

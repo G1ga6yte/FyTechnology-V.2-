@@ -34,10 +34,10 @@ function HeaderBlock() {
        </div>
        
        <div className="headerCont">
-         <div className="header upHeader">Ultra-tech</div>
-         <div className="header downHeader">Approach</div>
-         <p className="headerPrg">We use the latest technologies to create innovative and user-friendly solutions that
-           meet the needs of our clients</p>
+         <div className="header upHeader">Digital products</div>
+         <div className="header downHeader">creatives &</div>
+         <div className="header">Impressive</div>
+         <p className="headerPrg">We use the latest technologies to create innovative and user-friendly solutions that meet the needs of our clients</p>
        </div>
        
        {/*<div className={`links-block G-flex-between ${navFixed ? "navFixed" : " "}`}>*/}

@@ -146,8 +146,9 @@
     overflow: hidden;
     top: 200px;
     .letter{
+      transition: 0.5s ease-in-out all;
       font-size: 80px;
-      font-family: Inter-Medium, sans-serif;
+      font-family: 'PlexMono-Medium', sans-serif;
     }
     .space{
       width: 30px;
@@ -165,6 +166,7 @@
       border: 1px solid #EAEAEA;
       padding: 48px;
       overflow: hidden;
+      transition: 1s ease-in-out;
 
       .active{
         color: black !important;
@@ -176,7 +178,7 @@
         line-height: 38px !important;
         position: relative;
         color: #B8B8B8;
-        cursor: pointer;
+        cursor: url(../../../cursorH.svg);
 
         //&:nth-child(1) {
         //  color: black !important;
@@ -216,6 +218,7 @@
       border-radius: 16px;
       border: 1px solid #EAEAEA;
       padding: 48px;
+      transition: 1s ease-in-out;
 
       .includingServicesBlock{
         width: 300px;

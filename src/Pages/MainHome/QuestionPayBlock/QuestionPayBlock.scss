@@ -1,0 +1,91 @@
+.QuestionPayBlock{
+  position: relative;
+  z-index: 9000;
+
+  .header{
+    margin-left: 100px;
+    font-size: 80px;
+    font-family: 'PlexMono-Medium', sans-serif;
+    display: flex;
+    transition: 0.3s ease-in-out;
+    .space{
+      width: 40px;
+    }
+    .letter{
+      transition: 0.2s ease-in-out;
+      display: block;
+    }
+  }
+
+  .Sprints-Hours{
+    border-radius: 16px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    margin: 30px 100px;
+    padding: 2%;
+    display: flex;
+
+    .mainCont{
+      width: 48%;
+      display: flex;
+
+      &:nth-child(2){
+        border-left: 1px solid #EAEAEA;
+        padding-left: 20px;
+      }
+
+      .TextBlock{
+        display: flex;
+        flex-direction: column;
+
+        .MHeader{
+          font-family: 'PlexMono-Medium', sans-serif;
+          font-size: 32px;
+        }
+        .MPrg{
+          margin-top: 20px;
+          line-height: 24px;
+          font-family: 'PlexMono-Regular', sans-serif;
+
+          .markedPrg{
+            color: white;
+            background-color: #FFA06B;
+            border-radius: 3px;
+          }
+        }
+        .Animation{
+          width: 400px;
+          height: 400px;
+          position: relative;
+          div{
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            transform: scale(0.5);
+            height: 600px !important;
+            width: 600px !important;
+          }
+        }
+      }
+      .buttonBlock{
+        width: 400px;
+        display: flex;
+        align-items: end;
+        padding: 20px;
+        .G-Link-Button{
+          border: 1px solid black;
+          background-color: white;
+          .letter{
+            color: black;
+          }
+          .arrow-img{
+            display: none;
+          }
+          .arrow-imgB{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

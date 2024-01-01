@@ -2,6 +2,18 @@
   margin-top: 1500px;
   position: relative;
   z-index: 8889;
+  height: 200vh;
+
+  .circleCont{
+    position: fixed;
+    transform: translateX(-50%);
+    .circle{
+      border: 2px dashed #B8B8B8;
+      animation: spin 60s linear infinite;
+      border-radius: 50%;
+    }
+  }
+
 
   .Header{
     display: flex;
@@ -14,7 +26,7 @@
     transition: 1s ease-in-out;
     .letter{
       font-size: 100px;
-      font-family: Inter-Medium, sans-serif;
+      font-family: 'PlexMono-Medium', sans-serif;
     }
     .space{
       width: 50px;
@@ -32,7 +44,7 @@
 
     .ImgBlock{
       position: absolute;
-      bottom: -150px;
+      bottom: -200px;
       .ItemImg {
         width: 500px;
         z-index: 11;
@@ -128,7 +140,7 @@
             border: 1px solid #CECECE;
             color: #CECECE;
             font-size: 16px;
-            font-family: 'Inter-Regular', sans-serif;
+            font-family: 'PlexMono-Medium', sans-serif;
           }
 
           .ItemSkillM {
@@ -144,7 +156,7 @@
           text-overflow: ellipsis;
           font-size: 20px;
           margin-top: 8px;
-          font-family: 'Inter-Regular', sans-serif;
+          font-family: 'PlexMono-Regular', sans-serif;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
@@ -155,4 +167,9 @@
 
     }
   }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

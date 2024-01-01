@@ -7,7 +7,7 @@ import {OpportunityData} from "./opportunityData";
 
 function Opportunity() {
   const [active, setActive] = useState(OpportunityData[0])
-  const [blocksX, setBlocksX] = useState(0)
+  const [blocksX, setBlocksX] = useState(1000)
   
   const [fLetter, setFLetter]= useState({
     translate: 'translateY(-100px)',
@@ -28,93 +28,152 @@ function Opportunity() {
   
   
   window.addEventListener('scroll', function (){
-    if (this.scrollY < 400){
+    if (this.scrollY < 350){
       setFLetter({
         translate: 'translateY(-100px)',
         opacity: "0"
       })
-    }else if (this.scrollY >= 400 && this.scrollY <= 600){
-      let x = (100/200)*(this.scrollY-400)
-      let y = 100-x
-      let z = (1/200)*(this.scrollY-400)
-    
+    } else if (this.scrollY >= 350){
       setFLetter({
-        translate: `translateY(-${y}px)`,
-        opacity: `${z}`
+        translate: 'translateY(0)',
+        opacity: "1"
       })
-    } else {
-      setFLetter({
+    }
+  
+    if (this.scrollY < 400){
+      setSLetter({
+        translate: 'translateY(100px)',
+        opacity: "0"
+      })
+    } else if (this.scrollY >= 400){
+      setSLetter({
         translate: 'translateY(0)',
         opacity: "1"
       })
     }
   
     if (this.scrollY < 450){
-      setSLetter({
-        translate: 'translateY(100px)',
-        opacity: "0"
-      })
-    }else if (this.scrollY >= 450 && this.scrollY <= 650){
-      let x = (100/200)*(this.scrollY-450)
-      let y = 100-x
-      let z = (1/200)*(this.scrollY-450)
-    
-      setSLetter({
-        translate: `translateY(${y}px)`,
-        opacity: `${z}`
-      })
-    } else {
-      setSLetter({
-        translate: 'translateY(0)',
-        opacity: "1"
-      })
-    }
-  
-    if (this.scrollY < 500){
       setTLetter({
         translate: 'translateY(-100px)',
         opacity: "0"
       })
-    }else if (this.scrollY >= 500 && this.scrollY <= 700){
-      let x = (100/200)*(this.scrollY-500)
-      let y = 100-x
-      let z = (1/200)*(this.scrollY-500)
-    
-      setTLetter({
-        translate: `translateY(-${y}px)`,
-        opacity: `${z}`
-      })
-    } else {
+    } else if (this.scrollY >= 450){
       setTLetter({
         translate: 'translateY(0)',
         opacity: "1"
       })
     }
-  
-    if (this.scrollY < 550){
+    
+    if (this.scrollY < 500){
       setFoLetter({
         translate: 'translateY(100px)',
         opacity: "0"
       })
-    }else if (this.scrollY >= 550 && this.scrollY <= 750){
-      let x = (100/200)*(this.scrollY-550)
-      let y = 100-x
-      let z = (1/200)*(this.scrollY-550)
-    
-      setFoLetter({
-        translate: `translateY(${y}px)`,
-        opacity: `${z}`
-      })
-    } else {
+    } else if (this.scrollY >= 500){
       setFoLetter({
         translate: 'translateY(0)',
         opacity: "1"
       })
     }
     
-    if (this.scrollY >= 1300 && this.scrollY < 2000){
-      let x = this.scrollY-1300
-      setBlocksX(x)
+    
+    // if (this.scrollY < 400){
+    //   setFLetter({
+    //     translate: 'translateY(-100px)',
+    //     opacity: "0"
+    //   })
+    // }
+    // else if (this.scrollY >= 400 && this.scrollY <= 600){
+    //   let x = (100/200)*(this.scrollY-400)
+    //   let y = 100-x
+    //   let z = (1/200)*(this.scrollY-400)
+    //
+    //   setFLetter({
+    //     translate: `translateY(-${y}px)`,
+    //     opacity: `${z}`
+    //   })
+    // }
+    // else {
+    //   setFLetter({
+    //     translate: 'translateY(0)',
+    //     opacity: "1"
+    //   })
+    // }
+    //
+    // if (this.scrollY < 450){
+    //   setSLetter({
+    //     translate: 'translateY(100px)',
+    //     opacity: "0"
+    //   })
+    // }
+    // else if (this.scrollY >= 450 && this.scrollY <= 650){
+    //   let x = (100/200)*(this.scrollY-450)
+    //   let y = 100-x
+    //   let z = (1/200)*(this.scrollY-450)
+    //
+    //   setSLetter({
+    //     translate: `translateY(${y}px)`,
+    //     opacity: `${z}`
+    //   })
+    // } else {
+    //   setSLetter({
+    //     translate: 'translateY(0)',
+    //     opacity: "1"
+    //   })
+    // }
+    //
+    // if (this.scrollY < 500){
+    //   setTLetter({
+    //     translate: 'translateY(-100px)',
+    //     opacity: "0"
+    //   })
+    // }else if (this.scrollY >= 500 && this.scrollY <= 700){
+    //   let x = (100/200)*(this.scrollY-500)
+    //   let y = 100-x
+    //   let z = (1/200)*(this.scrollY-500)
+    //
+    //   setTLetter({
+    //     translate: `translateY(-${y}px)`,
+    //     opacity: `${z}`
+    //   })
+    // } else {
+    //   setTLetter({
+    //     translate: 'translateY(0)',
+    //     opacity: "1"
+    //   })
+    // }
+    //
+    // if (this.scrollY < 550){
+    //   setFoLetter({
+    //     translate: 'translateY(100px)',
+    //     opacity: "0"
+    //   })
+    // }else if (this.scrollY >= 550 && this.scrollY <= 750){
+    //   let x = (100/200)*(this.scrollY-550)
+    //   let y = 100-x
+    //   let z = (1/200)*(this.scrollY-550)
+    //
+    //   setFoLetter({
+    //     translate: `translateY(${y}px)`,
+    //     opacity: `${z}`
+    //   })
+    // } else {
+    //   setFoLetter({
+    //     translate: 'translateY(0)',
+    //     opacity: "1"
+    //   })
+    // }
+    
+    if (this.scrollY > 400){
+      setBlocksX(0)
+  
+      if (this.scrollY > 1600){
+        setBlocksX(1000)
+  
+      }
+    } else {
+      setBlocksX(1000)
+  
     }
   })
   

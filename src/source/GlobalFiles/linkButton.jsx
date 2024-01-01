@@ -29,6 +29,8 @@ function LinkButton ({...props}){
        <div className="arrowBlock">
          <img className="arrow-img" src={svgData.arrowRight} alt=""/>
          <img className="arrow-img" src={svgData.arrowRight} alt=""/>
+         <img className="arrow-imgB" src={svgData.arrowRightBlack} alt=""/>
+         <img className="arrow-imgB" src={svgData.arrowRightBlack} alt=""/>
        </div>
      </div>
   )

@@ -123,110 +123,11 @@ function FeaturedBlock() {
   })
   
   
-  
-  
-  // window.addEventListener('scroll', function () {
-  //   if (scrollY >= 2800) {
-  //     setStyle1({
-  //       width    : `800px`,
-  //       transform: `0`,
-  //       opacity  : `1`
-  //     })
-  //     if (this.scrollY >= 3500) {
-  //       setStyle1({
-  //         width    : `500px`,
-  //         transform: `400`,
-  //         opacity  : `0`
-  //       })
-  //     } else {
-  //       setStyle1({
-  //         width    : `800px`,
-  //         transform: `0`,
-  //         opacity  : `1`
-  //       })
-  //     }
-  //   } else {
-  //     setStyle1({
-  //       width    : `500px`,
-  //       transform: `0`,
-  //       opacity  : `1`
-  //     })
-  //   }
-  //
-  //   if (scrollY >= 2800) {
-  //     setStyle1({
-  //       width    : `800px`,
-  //       transform: `0`,
-  //       opacity  : `1`
-  //     })
-  //     if (this.scrollY >= 3500) {
-  //       setStyle1({
-  //         width    : `500px`,
-  //         transform: `400`,
-  //         opacity  : `0`
-  //       })
-  //     } else {
-  //       setStyle1({
-  //         width    : `800px`,
-  //         transform: `0`,
-  //         opacity  : `1`
-  //       })
-  //     }
-  //   } else {
-  //     setStyle1({
-  //       width    : `500px`,
-  //       transform: `0`,
-  //       opacity  : `1`
-  //     })
-  //   }
-  //
-  //
-  // })
-  //
-  //
-  // window.addEventListener('scroll', function (){
-  //   if(this.scrollY >= 3150 && this.scrollY <=4150){
-  //     if (this.scrollY >= 3150 && this.scrollY <=3650){
-  //       let x =500+ ((300/500)*(this.scrollY-3150))
-  //       setStyle2({
-  //         width: `${x}px`,
-  //         transform: `0`,
-  //         opacity: `1`
-  //       })
-  //     }
-  //     if (this.scrollY >= 3850 && this.scrollY <=4150){
-  //       let x = (800/300)*(this.scrollY-3850)
-  //       let y =1- (1/300)*(this.scrollY-3850)
-  //       setStyle2({
-  //         width: `800px`,
-  //         transform: `${x}`,
-  //         opacity: `${y}`
-  //       })
-  //     }
-  //   }
-  // })
-  //
-  // window.addEventListener('scroll', function (){
-  //   if(this.scrollY >= 3500 && this.scrollY <=4500){
-  //     if (this.scrollY >= 3500 && this.scrollY <=4000){
-  //       let x =500+ ((300/500)*(this.scrollY-3500))
-  //       setStyle3({
-  //         width: `${x}px`,
-  //         transform: `0`,
-  //         opacity: `1`
-  //       })
-  //     }
-  //     if (this.scrollY >= 4200 && this.scrollY <=4500){
-  //       let x = (800/300)*(this.scrollY-4200)
-  //       let y =1- (1/300)*(this.scrollY-4200)
-  //       setStyle3({
-  //         width: `800px`,
-  //         transform: `${x}`,
-  //         opacity: `${y}`
-  //       })
-  //     }
-  //   }
-  // })
+  const [circle, setCircle] = useState({
+    width: 20,
+    leftC: 50,
+    bottom: 50
+  })
   const [style1, setStyle1] = useState({
     scale: `0.15`,
     transform: `0`,
@@ -255,9 +156,23 @@ function FeaturedBlock() {
   const [style6, setStyle6] = useState({
     scale: `0.2`,
     transform: `0`,
-    left: `35`
+    left: `30`
   })
-  
+  const [style7, setStyle7] = useState({
+    scale: `0.2`,
+    transform: `0`,
+    left: `40`
+  })
+  const [style8, setStyle8] = useState({
+    scale: `0.2`,
+    transform: `0`,
+    left: `60`
+  })
+  const [style9, setStyle9] = useState({
+    scale: `0.2`,
+    transform: `0`,
+    left: `50`
+  })
   
   const [contFixed, setContFixed] = useState('relative')
   window.addEventListener('scroll', function(){
@@ -279,7 +194,7 @@ function FeaturedBlock() {
       
       
       let y = 30- (100/2000) * (this.scrollY-2000)
-      let z = 0.2 + (2.8/2000) * (this.scrollY-2000)
+      let z = 0.2 + (1.8/2000) * (this.scrollY-2000)
   
       setStyle3({
         scale: `${z}`,
@@ -299,7 +214,7 @@ function FeaturedBlock() {
     
     
       let y = 35+ (100/2000) * (this.scrollY-2050)
-      let z = 0.2 + (2.5/2000) * (this.scrollY-2050)
+      let z = 0.2 + (1.5/2000) * (this.scrollY-2050)
     
       setStyle2({
         scale: `${z}`,
@@ -319,7 +234,7 @@ function FeaturedBlock() {
     
     
       let y = 38- (20/2020) * (this.scrollY-2020)
-      let z = 0.15 + (2.2/2020) * (this.scrollY-2020)
+      let z = 0.15 + (1.2/2020) * (this.scrollY-2020)
     
       setStyle1({
         scale: `${z}`,
@@ -339,7 +254,7 @@ function FeaturedBlock() {
     
     
       let y = 32+ (60/2040) * (this.scrollY-2040)
-      let z = 0.15 + (2.0/2040) * (this.scrollY-2040)
+      let z = 0.15 + (1.0/2040) * (this.scrollY-2040)
     
       setStyle4({
         scale: `${z}`,
@@ -359,7 +274,7 @@ function FeaturedBlock() {
     
     
       let y = 30+ (120/2500) * (this.scrollY-2500)
-      let z = 0.15 + (2.8/2500) * (this.scrollY-2500)
+      let z = 0.15 + (1.8/2500) * (this.scrollY-2500)
     
       setStyle5({
         scale: `${z}`,
@@ -368,14 +283,151 @@ function FeaturedBlock() {
       })
     }
   
+    if (this.scrollY >=2400 && this.scrollY < 5000){
+      let x
+      if (this.scrollY>=2400 && this.scrollY <3500){
+        x = -(800/1100) * (this.scrollY-2400)
+      } else {
+        x = -800+(700/900) * (this.scrollY-3500)
+      }
+    
+    let z
+      let y
+    
+      if (this.scrollY >=2400 && this.scrollY < 4400){
+         y = 30- (40/2400) * (this.scrollY-2400)
+         z = 0.15 + (1.6/2400) * (this.scrollY-2400)
+      }
+    
+      setStyle6({
+        scale: `${z}`,
+        transform: `${x}`,
+        left: `${y}`
+      })
+    }
   
+    if (this.scrollY >=2450 && this.scrollY < 5050){
+      let x
+      if (this.scrollY>=2450 && this.scrollY <3450){
+        x = -(700/1000) * (this.scrollY-2400)
+      } else {
+        x = -700+(1100/1600) * (this.scrollY-3450)
+      }
+    
+      let z
+      let y
+    
+      if (this.scrollY >=2450 && this.scrollY < 5050){
+        y = 30+ (25/2600) * (this.scrollY-2450)
+        z = 0.15 + (1.5/2600) * (this.scrollY-2450)
+      }
+    
+      setStyle7({
+        scale: `${z}`,
+        transform: `${x}`,
+        left: `${y}`
+      })
+    }
   
+    if (this.scrollY >=2300 && this.scrollY < 4500){
+      let x
+      if (this.scrollY>=2300 && this.scrollY <3450){
+        x = -(700/1150) * (this.scrollY-2400)
+      } else {
+        x = -700+(900/1000) * (this.scrollY-3450)
+      }
+    
+      let z
+      let y
+    
+      if (this.scrollY >=2300 && this.scrollY < 4500){
+        y = 40+ (25/2300) * (this.scrollY-2300)
+        z = 0.15 + (1.5/2300) * (this.scrollY-2300)
+      }
+    
+      setStyle7({
+        scale: `${z}`,
+        transform: `${x}`,
+        left: `${y}`
+      })
+    }
   
+    if (this.scrollY >=2200 && this.scrollY < 4200){
+      let x
+      if (this.scrollY>=2200 && this.scrollY <3250){
+        x = -(500/1050) * (this.scrollY-2200)
+      } else {
+        x = -500+(1000/950) * (this.scrollY-3250)
+      }
+    
+      let z
+      let y
+    
+      if (this.scrollY >=2200 && this.scrollY < 4200){
+        y = 60+ (50/2000) * (this.scrollY-2200)
+        z = 0.15 + (1.5/2000) * (this.scrollY-2200)
+      }
+    
+      setStyle8({
+        scale: `${z}`,
+        transform: `${x}`,
+        left: `${y}`
+      })
+    }
+    
+    if (this.scrollY >=2100 && this.scrollY < 4100){
+      let x
+      if (this.scrollY>=2100 && this.scrollY <3250){
+        x = -(700/1150) * (this.scrollY-2100)
+      } else {
+        x = -700+(1200/850) * (this.scrollY-3250)
+      }
+    
+      let z
+      let y
+    
+      if (this.scrollY >=2100 && this.scrollY < 4100){
+        y = 50- (50/2000) * (this.scrollY-2100)
+        z = 0.15 + (1.5/2000) * (this.scrollY-2100)
+      }
+    
+      setStyle9({
+        scale: `${z}`,
+        transform: `${x}`,
+        left: `${y}`
+      })
+    }
+    
+    if (this.scrollY >=2000 && this.scrollY <3500){
+      let x =20+ (830/1500)*(this.scrollY-2000)
+      setCircle({
+        width: x,
+        leftC: 50,
+        bottom: 50
+      })
+    }
+    
+    if (this.scrollY >= 4100 && this.scrollY < 5100){
+      let x = 850+ (this.scrollY-4100)
+      let y = 50+ (20/1000)*(this.scrollY-4100)
+      let z = 50+ (650/1000)*(this.scrollY-4100)
+      setCircle({
+        width: x,
+        leftC: y,
+        bottom: z
+      })
+    }
+    
   })
   
   return (
      <div  className="FeaturedWorkBlock ">
        {/*<p className="header G-Block-Header">Featured work</p>*/}
+       <div style={{left: `${circle.leftC}%`, bottom: `-${circle.bottom}px`}} className="circleCont">
+         <div style={{width: `${circle.width}px`, height: `${circle.width}px`}} className="circle" ></div>
+
+       </div>
+       
        <div style={{position: fixed, left: left}} className="Header">
          <div style={{transform: fLetter.translate, opacity: fLetter.opacity}} className="letter">F</div>
          <div style={{transform: sLetter.translate, opacity: sLetter.opacity}} className="letter">E</div>
@@ -401,13 +453,20 @@ function FeaturedBlock() {
          {/*<FeatureComponent style={style2} el={FeaturesData[1]}/>*/}
          <FeatureComponent  style={style5} el={FeaturesData[4]}/>
          <FeatureComponent  style={style6} el={FeaturesData[5]}/>
-         
+         <FeatureComponent  style={style7} el={FeaturesData[6]}/>
+         <FeatureComponent  style={style8} el={FeaturesData[7]}/>
+  
+         <FeatureComponent  style={style9} el={FeaturesData[8]}/>
+  
+  
+  
          <FeatureComponent  style={style3} el={FeaturesData[2]}/>
          <FeatureComponent  style={style2} el={FeaturesData[1]}/>
          <FeatureComponent  style={style1} el={FeaturesData[3]}/>
          <FeatureComponent  style={style4} el={FeaturesData[0]}/>
-  
-         
+
+
+
 
 
        </div>
