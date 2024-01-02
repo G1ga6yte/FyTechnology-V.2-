@@ -7,6 +7,10 @@ function QuestionPayBlock (){
   let x = "What are you paying for?"
   let y = x.split('')
   
+  const [mHeader, setMHeader] = useState({
+    transform: 100,
+    opacity: 0
+  })
   const [hRotate, setHRotate] = useState(90)
   window.addEventListener('scroll', function (){
     if (this.scrollY > 4800){
@@ -14,6 +18,14 @@ function QuestionPayBlock (){
     } else {
       setHRotate(90)
     }
+    
+    if (this.scrollY > 4900){
+      setMHeader({
+        transform: 0,
+        
+      })
+    }
+    
     
     
   })
@@ -32,13 +44,13 @@ function QuestionPayBlock (){
           })}
         </div>
        
-       <div className="Sprints-Hours">
+       <div  className="Sprints-Hours">
           <div className="SprintsCont mainCont">
             <div className="TextBlock">
               <div className="MHeader">Sprints</div>
               <p className="MPrg">You've described <span className="markedPrg">a sprint-based approach</span> to project management , where a team <span className="markedPrg">focuses on a specific task</span> for a set period of time. This method allows for <span className="markedPrg">concentrated effort</span> and clear milestones. Splitting a large project into smaller, manageable tasks can enhance productivity and accountability.</p>
               <div className="Animation">
-                <Spline scene="https://prod.spline.design/8KKj74xENKTtAomC/scene.splinecode"/>
+                <Spline scene="https://prod.spline.design/vdCC4xR3VaynuWBn/scene.splinecode"/>
               </div>
             </div>
             <div className="buttonBlock">

@@ -1,9 +1,9 @@
 .QuestionPayBlock{
   position: relative;
   z-index: 9000;
+  padding: 0 100px;
 
   .header{
-    margin-left: 100px;
     font-size: 80px;
     font-family: 'PlexMono-Medium', sans-serif;
     display: flex;
@@ -21,13 +21,16 @@
     border-radius: 16px;
     border: 1px solid #EAEAEA;
     background: #FFF;
-    margin: 30px 100px;
-    padding: 2%;
+    margin: 30px 0;
     display: flex;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s ease-in-out;
 
     .mainCont{
       width: 48%;
       display: flex;
+      margin: 2%;
 
       &:nth-child(2){
         border-left: 1px solid #EAEAEA;
@@ -54,7 +57,7 @@
           }
         }
         .Animation{
-          width: 400px;
+          width: 450px;
           height: 400px;
           position: relative;
           div{
@@ -63,7 +66,7 @@
             left: -100px;
             transform: scale(0.5);
             height: 600px !important;
-            width: 600px !important;
+            width: 700px !important;
           }
         }
       }

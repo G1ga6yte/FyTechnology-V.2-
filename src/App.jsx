@@ -4,6 +4,9 @@ import Navigation from "./FixedPages/navigationBlock/navigation";
 import HomeMain from "./Pages/MainHome/homeMain";
 import {svgData} from "./source/svg/svgData";
 import {useState} from "react";
+import Spline from "@splinetool/react-spline";
+
+
 
 
 function App() {
@@ -15,20 +18,40 @@ function App() {
     setLeft(event.clientX)
     setTop(event.clientY)
   })
-  return (
-    <div className="App G-container">
-      {/*<img className="cursor" style={{ left: `${left-12}px`, top: `${top-12}px`}} src={svgData.cursor} alt=""/>*/}
-      
-      <Navigation/>
-      
-      <Routes>
-        <Route path="/" element={<HomeMain />} /> // MainHome - home global file
-        <Route path="/home" element={<HomeMain />} /> // MainHome - home global file
-        
-      </Routes>
-      
-    </div>
-  );
+  const [ffalse, setFalse] = useState(false)
+  
+  if (Navigation === false){
+    setFalse(false)
+  }
+  
+     {if(ffalse){
+       return(
+          <div className="App G-container">
+            {/*<img className="cursor" style={{ left: `${left-12}px`, top: `${top-12}px`}} src={svgData.cursor} alt=""/>*/}
+     
+     
+            <div></div>
+     
+            <Navigation/>
+     
+            <Routes>
+              <Route path="/" element={<HomeMain />} /> // MainHome - home global file
+              <Route path="/home" element={<HomeMain />} /> // MainHome - home global file
+     
+            </Routes>
+   
+          </div>
+       )
+       } else {
+       return (
+          <div className="errorPage">
+            <Spline scene="https://prod.spline.design/VbFwDwlDYBPBpcWf/scene.splinecode" />
+            
+          </div>
+       )
+     }
+     }
+  
 }
 
 export default App;

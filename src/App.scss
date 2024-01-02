@@ -8,4 +8,15 @@
     position: absolute;
     z-index: 10000;
   }
+  .errorPage{
+    overflow: hidden !important;
+    position: relative;
+
+    div{
+
+      canvas{
+
+      }
+    }
+  }
 }
