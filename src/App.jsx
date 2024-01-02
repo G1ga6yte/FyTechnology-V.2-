@@ -46,7 +46,6 @@ function App() {
        return (
           <div className="errorPage">
             <Spline scene="https://prod.spline.design/VbFwDwlDYBPBpcWf/scene.splinecode" />
-            
           </div>
        )
      }
