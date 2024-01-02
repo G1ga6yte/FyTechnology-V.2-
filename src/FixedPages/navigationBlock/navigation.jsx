@@ -60,6 +60,7 @@ function Navigation (){
               </div>
               
               <div className="linkBlock">
+                
                 <MenuBarLink link={"/home"} name={"About us"}/>
                 <MenuBarLink link={"/home"} name={"About us"}/>
                 <MenuBarLink link={"/home"} name={"About us"}/>

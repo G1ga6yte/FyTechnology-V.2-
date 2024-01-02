@@ -9,3 +9,10 @@ body{
 }
 
 
+canvas{
+    aspect-ratio: auto !important;
+    z-index: 8888;
+    position: relative;
+}
+
+
